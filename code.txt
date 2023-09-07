@@ -1,0 +1,22 @@
+void bai14() {
+	int n, q;
+	int l;
+	cin >> n;
+	int max;
+	int a[101];
+	int f[101];
+	set<int> tmp;
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	cin >> q;
+	while (q--) {
+		tmp.clear();
+		cin >> l;
+		for (int i = l; i <= n - 1; i++) {
+			tmp.insert(a[i]);
+			f[l] = tmp.size();
+		}
+		cout << f[l] << " " << endl;
+	}
+}
